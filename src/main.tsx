@@ -2,8 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { initializeApp } from "firebase/app";
 import { initializeFirestore } from "firebase/firestore";
+import { BrowserRouter } from "react-router-dom";
 
-import './index.css'
+import './index.scss'
 import App from './App/App.tsx'
 import firebaseConfig from "../firebaseConfig.ts";
 
@@ -15,6 +16,8 @@ export const db = initializeFirestore(app, {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
   </StrictMode>,
 )

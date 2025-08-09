@@ -1,15 +1,19 @@
-// import { useState } from 'react'
 
-import './App.css'
+import { Route, Routes } from "react-router-dom";
+
+import "./App.scss";
+
+import { Loading } from "./links";
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <div>
-      
+    <div className="all">
+      <Routes>
+        <Route path="/loading" element={<Loading />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
