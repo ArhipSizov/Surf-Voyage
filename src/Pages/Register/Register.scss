@@ -1,0 +1,78 @@
+.register {
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 34px;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 24px;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+  }
+  h3 {
+    margin: 8px 0 4px 6px;
+  }
+  p {
+    margin: 12px 2px 0 2px;
+    text-align: center;
+    color: #787576;
+  }
+  .register_form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    .input {
+      outline: none;
+      font-size: 16px;
+      border: none;
+      background-color: #eff1f3;
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .register_button {
+      border: none;
+      margin: 16px auto;
+      width: 300px;
+      background-color: #1995f5;
+      border-radius: 12px;
+      padding: 12px 0 12px 0;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 24px;
+      transition: 0.15s;
+    }
+    .login_button:hover {
+      transform: scale(1.05);
+    }
+    .eye{
+      display: block;
+      height: 286px;
+      margin: auto 0;
+      position: absolute;
+      margin-left: 260px;
+      width: 22px;
+    }
+    .error_text{
+      margin-top: 12px;
+      color: #df2f2f;
+      font-size: 18px;
+    }
+  }
+  a {
+    color: black;
+    font-size: 24px;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    transition: 0.15s;
+  }
+  a:hover {
+    transform: scale(1.05);
+  }
+}

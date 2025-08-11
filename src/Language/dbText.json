@@ -2,11 +2,23 @@
   "en": {
     "Oops...": "Oops...",
     "This page doesn't seem to exist, you can go back to": "This page doesn't seem to exist, you can go back to",
-    "home": "home"
+    "home": "home",
+    "Login or create your profile": "Login or create your profile",
+    "To continue, you must log in or register in the application":"To continue, you must log in or register in the application",
+    "By registering in the application you agree to the user agreement and privacy policy":"By registering in the application you agree to the user agreement and privacy policy",
+    "Login": "Login",
+    "Password":"Password",
+    "Register":"Register"
   },
   "ru": {
     "Oops...": "Упс...",
     "This page doesn't seem to exist, you can go back to": "Похоже, этой страницы не существует, вы можете вернутся на",
-    "home": "главную"
+    "home": "главную",
+    "Login or create your profile": "Войдите или создайте свой профиль ",
+    "To continue, you must log in or register in the application":"Для продолжения  необходимо зайти или зарегестрироваться в приложении",
+    "By registering in the application you agree to the user agreement and privacy policy":"Регистрируясь в приложении вы соглашаетесь с соглашения пользователей и политики конфеденциальности",
+    "Login": "Вход",
+    "Password":"Пароль",
+    "Register":"Регистрация"
   }
 }
