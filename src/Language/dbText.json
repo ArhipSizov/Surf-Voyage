@@ -13,7 +13,9 @@
     "Invalid email":"Invalid email",
     "Email is already in use":"Email is already in use",
     "Password less than 6 characters":"Password less than 6 characters",
-    "Incorrect email":"Incorrect email"
+    "Incorrect email":"Incorrect email",
+    "Light theme":"Light theme",
+    "Black theme":"Black theme"
   },
   "ru": {
     "Oops...": "Упс...",
@@ -29,6 +31,8 @@
     "Invalid email":"Неверный email",
     "Email is already in use":"E-mail уже используется",
     "Password less than 6 characters":"Пароль меньше 6 символов",
-    "Incorrect email":"Неправильный email"
+    "Incorrect email":"Неправильный email",
+    "Light theme":"Светлая тема",
+    "Black theme":"Темная тема"
   }
 }

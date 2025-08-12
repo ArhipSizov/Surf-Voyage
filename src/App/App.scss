@@ -1,6 +1,15 @@
 .all {
   min-height: 100vh;
   min-width: 100%;
+  .input {
+    outline: none;
+    font-size: 16px;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+.lite {
   .main_color {
     background-color: #1995f5;
     color: #fff;
@@ -17,11 +26,28 @@
     color: #787576;
   }
   .input {
-    outline: none;
-    font-size: 16px;
-    border: none;
     background-color: #eff1f3;
-    padding: 16px;
-    border-radius: 12px;
+  }
+}
+
+.black {
+  background-color: #1d1d1d;
+  .main_color {
+    background-color: #05518b;
+    color: #fff;
+  }
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  input {
+    color: #fcfcfc;
+  }
+  .gray_p {
+    color: #bcb8b9;
+  }
+  .input {
+    background-color: #909091;
   }
 }

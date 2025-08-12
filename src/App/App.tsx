@@ -57,6 +57,11 @@ function App() {
     } else {
       document.cookie = "language=en; max-age=604800";
     }
+    if (getCookie("theme")) {
+      document.cookie = `theme=${getCookie("theme")}; max-age=604800`;
+    } else {
+      document.cookie = "theme=all lite; max-age=604800";
+    }
     if (getCookie("isLogin")) {
       document.cookie = `isLogin=${getCookie("isLogin")}; max-age=604800`;
     }
@@ -67,7 +72,7 @@ function App() {
   }
 
   return (
-    <div className="all">
+    <div className={getCookie("theme")}>
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/loading" element={<Loading />} />

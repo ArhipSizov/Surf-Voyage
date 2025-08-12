@@ -44,8 +44,26 @@ export default function Main() {
       >
         English
       </p>
+      <p
+        onClick={() => (
+          (document.cookie = "theme=all lite; max-age=604800"),
+          location.reload()
+        )}
+      >
+        {T("Light theme")}
+      </p>
+      <p
+        onClick={() => (
+          (document.cookie = "theme=all black; max-age=604800"),
+          location.reload()
+        )}
+      >
+        {T("Black theme")}
+      </p>
       <p>{T("Oops...")}</p>
-      <p>e-mail {email},   number {number},   name {name}</p>
+      <p>
+        e-mail {email}, number {number}, name {name}
+      </p>
     </div>
   );
 }
