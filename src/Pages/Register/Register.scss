@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 300px;
     margin: 0 auto;
-    margin-top: 100px;
+    padding-top: 100px;
     margin-bottom: 34px;
   }
   h1 {
@@ -19,35 +19,32 @@
   p {
     margin: 12px 2px 0 2px;
     text-align: center;
-    color: #787576;
   }
   .register_form {
     display: flex;
     flex-direction: column;
     width: 300px;
     margin: 0 auto;
-    .input {
-      outline: none;
-      font-size: 16px;
-      border: none;
-      background-color: #eff1f3;
-      padding: 16px;
-      border-radius: 12px;
-    }
     .register_button {
       border: none;
       margin: 16px auto;
       width: 300px;
-      background-color: #1995f5;
       border-radius: 12px;
       padding: 12px 0 12px 0;
-      color: #ffffff;
       cursor: pointer;
       font-size: 24px;
       transition: 0.15s;
     }
-    .login_button:hover {
+    .register_button:hover {
       transform: scale(1.05);
+    }
+    .register_button_no_click{
+      background-color: #1995f570;
+      color: #ffffff;
+      cursor: no-drop;
+    }
+    .register_button_no_click:hover {
+      transform: scale(1);
     }
     .eye{
       display: block;

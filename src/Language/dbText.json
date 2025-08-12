@@ -8,7 +8,12 @@
     "By registering in the application you agree to the user agreement and privacy policy":"By registering in the application you agree to the user agreement and privacy policy",
     "Login": "Login",
     "Password":"Password",
-    "Register":"Register"
+    "Register":"Register",
+    "Invalid password":"Invalid password",
+    "Invalid email":"Invalid email",
+    "Email is already in use":"Email is already in use",
+    "Password less than 6 characters":"Password less than 6 characters",
+    "Incorrect email":"Incorrect email"
   },
   "ru": {
     "Oops...": "Упс...",
@@ -19,6 +24,11 @@
     "By registering in the application you agree to the user agreement and privacy policy":"Регистрируясь в приложении вы соглашаетесь с соглашения пользователей и политики конфеденциальности",
     "Login": "Вход",
     "Password":"Пароль",
-    "Register":"Регистрация"
+    "Register":"Регистрация",
+    "Invalid password":"Неверный пароль",
+    "Invalid email":"Неверный email",
+    "Email is already in use":"E-mail уже используется",
+    "Password less than 6 characters":"Пароль меньше 6 символов",
+    "Incorrect email":"Неправильный email"
   }
 }

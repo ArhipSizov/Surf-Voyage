@@ -1,8 +1,13 @@
 import dbText from "./dbText.json";
 import getCookie from "../Utils/getCookie";
 
-void dbText
-
 export default function T(text: string) {
-  return eval("dbText." + getCookie("language"))[text];
+  console.log(dbText, "fix fb");
+  let language: string | undefined;
+  if (getCookie("language")) {
+    language = getCookie("language");
+  } else {
+    language = "en";
+  }
+  return eval("dbText." + language)[text];
 }

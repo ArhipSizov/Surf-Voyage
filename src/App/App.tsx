@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { getDatabase, ref, onValue } from "firebase/database";
 import { useDispatch } from "react-redux";
 import { addUser } from "../Services/store/Slice";
@@ -18,7 +17,6 @@ function App() {
   const [email, setIEmail] = useState<string>("");
 
   const auth = getAuth();
-  const navigate = useNavigate();
 
   let data = null;
   const database = getDatabase();
@@ -30,7 +28,6 @@ function App() {
   const dispatch = useDispatch();
   onAuthStateChanged(auth, (currentUser) => {
     if (!currentUser) {
-      navigate("/loading");
       return;
     }
     onValue(starCountRef, (snapshot) => {
@@ -53,16 +50,19 @@ function App() {
       });
     });
   });
-
+  
   useEffect(() => {
     if (getCookie("language")) {
       document.cookie = `language=${getCookie("language")}; max-age=604800`;
     } else {
       document.cookie = "language=en; max-age=604800";
     }
+    if (getCookie("isLogin")) {
+      document.cookie = `isLogin=${getCookie("isLogin")}; max-age=604800`;
+    }
   }, []);
 
-  if (!email) {
+  if (!email && getCookie("isLogin")) {
     return <Loading />;
   }
 
