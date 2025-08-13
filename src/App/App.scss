@@ -10,9 +10,12 @@
   }
 }
 .lite {
-  .main_color {
+  .main_blue_color {
     background-color: #1995f5;
     color: #fff;
+  }
+  .main_color {
+    background-color: #fff;
   }
   h1,
   h2,
@@ -21,6 +24,9 @@
   a,
   input {
     color: #000;
+  }
+  .gray {
+    background-color: #787576;
   }
   .gray_p {
     color: #787576;
@@ -31,8 +37,11 @@
 }
 
 .black {
-  background-color: #1d1d1d;
+  background-color: #333;
   .main_color {
+    background-color: #333;
+  }
+  .main_blue_color {
     background-color: #05518b;
     color: #fff;
   }
@@ -42,7 +51,10 @@
   p,
   a,
   input {
-    color: #fcfcfc;
+    color: #fff;
+  }
+  .gray {
+    background-color: #818181;
   }
   .gray_p {
     color: #bcb8b9;

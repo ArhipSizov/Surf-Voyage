@@ -4,5 +4,8 @@ export default interface data {
   name: string;
   email: string;
   password: string;
+  surname: string;
+  city: string;
+  country: string;
   number: string
 }

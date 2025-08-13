@@ -14,6 +14,9 @@ const slice = createSlice({
                 email: action.payload.email,
                 password: action.payload.pasvord,
                 name: action.payload.name,
+                surname: action.payload.surname,
+                city: action.payload.city,
+                country: action.payload.country,
                 number: action.payload.number,
                 key: action.payload.key,
             })

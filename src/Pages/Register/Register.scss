@@ -1,4 +1,5 @@
 .register {
+  padding-bottom: 12px;
   .logo {
     display: flex;
     justify-content: space-between;
@@ -21,13 +22,18 @@
     text-align: center;
   }
   .register_form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
     margin: 0 auto;
+    input {
+      margin: 2%;
+      width: 96%;
+    }
     .register_button {
       border: none;
-      margin: 16px auto;
+      margin-top: 40px;
+      height: 50px;
       width: 300px;
       border-radius: 12px;
       padding: 12px 0 12px 0;
@@ -38,7 +44,7 @@
     .register_button:hover {
       transform: scale(1.05);
     }
-    .register_button_no_click{
+    .register_button_no_click {
       background-color: #1995f570;
       color: #ffffff;
       cursor: no-drop;
@@ -46,16 +52,16 @@
     .register_button_no_click:hover {
       transform: scale(1);
     }
-    .eye{
+    .eye {
       display: block;
-      height: 286px;
+      height: 134px;
       margin: auto 0;
       position: absolute;
-      margin-left: 260px;
+      margin-left: 550px;
       width: 22px;
     }
-    .error_text{
-      margin-top: 12px;
+    .error_text {
+      margin-top: 0;
       color: #df2f2f;
       font-size: 18px;
     }
@@ -70,5 +76,15 @@
   }
   a:hover {
     transform: scale(1.05);
+  }
+  @media (max-width: 650px) {
+    .register_form {
+      grid-template-columns: 1fr;
+      width: 320px;
+      .eye {
+        height: 324px;
+        margin-left: 276px;
+      }
+    }
   }
 }

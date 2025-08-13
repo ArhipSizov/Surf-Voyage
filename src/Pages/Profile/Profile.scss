@@ -1,0 +1,38 @@
+.profile {
+  top: 12px;
+  right: 12px;
+  position: fixed;
+  padding: 52px 32px;
+  border-radius: 12px;
+  .top_profile {
+    margin-bottom: 24px;
+    p {
+      text-align: center;
+    }
+    .name {
+      font-size: 32px;
+    }
+    .email {
+      text-decoration: underline;
+    }
+  }
+  .profile_all_block {
+    .profile_block {
+      cursor: pointer;
+      transition: 0.15s;
+      margin-top: 12px;
+      img {
+        position: absolute;
+        margin-top: -2px;
+      }
+      p {
+        font-size: 18px;
+        margin-left: 36px;
+        display: inline;
+      }
+    }
+    .profile_block:hover {
+      transform: scale(1.05);
+    }
+  }
+}

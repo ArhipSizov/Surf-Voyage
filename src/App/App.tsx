@@ -24,7 +24,7 @@ function App() {
   onValue(starCountRef, (snapshot) => {
     data = snapshot.val();
   });
-  
+
   const dispatch = useDispatch();
   onAuthStateChanged(auth, (currentUser) => {
     if (!currentUser) {
@@ -36,13 +36,16 @@ function App() {
       dataArr.forEach(function (item: data) {
         const dataEmail = item.email;
         if (currentUser.email == dataEmail && email == "") {
-          setIEmail(item.email)
+          setIEmail(item.email);
           dispatch(
             addUser({
               email: item.email,
               pasvord: item.password,
               name: item.name,
               number: item.number,
+              surname: item.surname,
+              city: item.city,
+              country: item.country,
               key: item.key,
             })
           );
@@ -50,7 +53,7 @@ function App() {
       });
     });
   });
-  
+
   useEffect(() => {
     if (getCookie("language")) {
       document.cookie = `language=${getCookie("language")}; max-age=604800`;
@@ -66,9 +69,13 @@ function App() {
       document.cookie = `isLogin=${getCookie("isLogin")}; max-age=604800`;
     }
   }, []);
-
+   
   if (!email && getCookie("isLogin")) {
-    return <Loading />;
+    return (
+      <div className={getCookie("theme")}>
+        <Loading />
+      </div>
+    );
   }
 
   return (

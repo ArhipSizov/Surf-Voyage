@@ -29,7 +29,7 @@ export default function Login() {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, pasword)
       .then(() => {
-        navigate("/profile");
+        navigate("/");
         document.cookie = `isLogin=true; max-age=604800`;
       })
       .catch(() => {
@@ -110,7 +110,7 @@ export default function Login() {
         <p className={errorEmail}>{T("Invalid email")}</p>
         {(canClick && (
           <input
-            className="login_button main_color"
+            className="login_button main_blue_color"
             value={T("Login")}
             type="submit"
           />

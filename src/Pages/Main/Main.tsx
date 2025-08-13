@@ -1,35 +1,22 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
 
-import type data from "../../Services/fbData";
-import type allData from "../../Services/fbAllData";
-
-interface state {
-  user: allData;
-}
-
+import Profile from "../Profile/Profile";
 import T from "../../Language/Text";
+import getCookie from "../../Utils/getCookie";
 
 import "./Main.scss";
 
 export default function Main() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-
-  const userArr = useSelector((state: state) => state.user.user);
-  if (email == "") {
-    userArr.forEach((element: data) => {
-      setEmail(element.email);
-      setName(element.name);
-      setNumber(element.number);
-    });
+  const [profileShow, setProfileShow] = useState<boolean>(false);
+  function closeProfile() {
+    if (profileShow) {
+      setProfileShow(false);
+    }
   }
 
-  console.log(email, name, number);
-
   return (
-    <div className="Main">
+    <div className="Main" onClick={() => closeProfile()}>
+      {profileShow && <Profile />}
       <p
         onClick={() => (
           (document.cookie = "language=ru; max-age=604800"), location.reload()
@@ -60,10 +47,13 @@ export default function Main() {
       >
         {T("Black theme")}
       </p>
-      <p>{T("Oops...")}</p>
-      <p>
-        e-mail {email}, number {number}, name {name}
-      </p>
+      {getCookie("isLogin") && (
+        <img
+          onClick={() => setProfileShow(!profileShow)}
+          src="/profile.svg"
+          alt=""
+        />
+      )}
     </div>
   );
 }

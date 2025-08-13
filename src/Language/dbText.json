@@ -15,7 +15,18 @@
     "Password less than 6 characters":"Password less than 6 characters",
     "Incorrect email":"Incorrect email",
     "Light theme":"Light theme",
-    "Black theme":"Black theme"
+    "Black theme":"Black theme",
+    "Hello, ":"Hello, ",
+    "Change profile":"Change profile",
+    "Favorites":"Favorites",
+    "My trips":"My trips",
+    "Help center":"Help center",
+    "Log out":"Log out",
+    "Name":"Name",
+    "Surname":"Surname",
+    "City":"City",
+    "Country":"Country",
+    "Number":"Number"
   },
   "ru": {
     "Oops...": "Упс...",
@@ -33,6 +44,17 @@
     "Password less than 6 characters":"Пароль меньше 6 символов",
     "Incorrect email":"Неправильный email",
     "Light theme":"Светлая тема",
-    "Black theme":"Темная тема"
+    "Black theme":"Темная тема",
+    "Hello, ":"Привет, ",
+    "Change profile":"Изменить профиль",
+    "Favorites":"Избранное",
+    "My trips":"Мои поездки",
+    "Help center":"Центр поддержки",
+    "Log out":"Выйти",
+    "Name":"Имя",
+    "Surname":"Фамилия",
+    "City":"Город",
+    "Country":"Страна",
+    "Number":"Номер"
   }
 }

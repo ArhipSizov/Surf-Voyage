@@ -20,6 +20,11 @@ import type data from "../../Services/fbData";
 export default function Register() {
   const [email, setEmail] = useState<string>("");
   const [pasword, setPasword] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [surname, setSurname] = useState<string>("");
+  const [city, setCity] = useState<string>("");
+  const [country, setCountry] = useState<string>("");
+  const [number, setNumber] = useState<string>("");
   const [errorPassword, setErrorPassword] = useState<string>("error_text");
   const [error, setError] = useState<string>("none");
   const [errorEmail, setErrorEmail] = useState<string>("none");
@@ -37,9 +42,9 @@ export default function Register() {
     createUserWithEmailAndPassword(auth, email, pasword)
       .then(() => {
         if (auth.currentUser) {
-          navigate("/profile");
+          navigate("/");
           document.cookie = `isLogin=true; max-age=604800`;
-          addUserDB({ email, pasword });
+          addUserDB({ email, pasword, name, surname, city, country, number });
           addTask();
         }
       })
@@ -107,36 +112,95 @@ export default function Register() {
         {T("To continue, you must log in or register in the application")}
       </p>
       <form onSubmit={getRegisterData} className="register_form">
-        <h3>e-mail</h3>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-          className="input"
-          placeholder="e-mail"
-          type="email"
-          required
-        />
-        <h3>{T("Password")}</h3>
-        <input
-          onChange={(e) => setPasword(e.target.value)}
-          value={pasword}
-          className="input"
-          placeholder={T("Password")}
-          type={type ? "password" : "text"}
-          required
-        />
+        <div>
+          <h3>e-mail *</h3>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            className="input"
+            placeholder="e-mail"
+            type="email"
+            required
+          />
+          <p className={errorEmail}>{T("Email is already in use")}</p>
+          <p className={error}>{T("Incorrect email")}</p>
+        </div>
+        <div>
+          <h3>{T("Password")} *</h3>
+          <input
+            onChange={(e) => setPasword(e.target.value)}
+            value={pasword}
+            className="input"
+            placeholder={T("Password")}
+            type={type ? "password" : "text"}
+            required
+          />
+          <p className={errorPassword}>
+            {T("Password less than 6 characters")}
+          </p>
+        </div>
+        <div>
+          <h3>{T("Name")} *</h3>
+          <input
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            className="input"
+            placeholder={T("Name")}
+            type="text"
+            required
+          />
+        </div>
+        <div>
+          <h3>{T("Surname")}</h3>
+          <input
+            onChange={(e) => setSurname(e.target.value)}
+            value={surname}
+            className="input"
+            placeholder={T("Surname")}
+            type="text"
+          />
+        </div>
+        <div>
+          <h3>{T("City")}</h3>
+          <input
+            onChange={(e) => setCity(e.target.value)}
+            value={city}
+            className="input"
+            placeholder={T("City")}
+            type="text"
+          />
+        </div>
+        <div>
+          <h3>{T("Country")} *</h3>
+          <input
+            onChange={(e) => setCountry(e.target.value)}
+            value={country}
+            className="input"
+            placeholder={T("Country")}
+            type="text"
+            required
+          />
+        </div>
+        <div>
+          <h3>{T("Number")} *</h3>
+          <input
+            onChange={(e) => setNumber(e.target.value)}
+            value={number}
+            className="input"
+            placeholder={T("Number")}
+            type="number"
+            required
+          />
+        </div>
         <img
           className="eye"
           onClick={() => setType(!type)}
           src={type ? "/eye.svg" : "/eye_open.svg"}
           alt=""
         />
-        <p className={error}>{T("Incorrect email")}</p>
-        <p className={errorEmail}>{T("Email is already in use")}</p>
-        <p className={errorPassword}>{T("Password less than 6 characters")}</p>
         {(canClick && (
           <input
-            className="register_button main_color"
+            className="register_button main_blue_color"
             value={T("Register")}
             type="submit"
           />
