@@ -1,0 +1,13 @@
+.block_rest{
+    width: 400px;
+    margin: 12px auto;
+    border-radius: 12px;
+    cursor: pointer;
+    .main_img{
+        width: 100%;
+    }
+    div{
+        display: flex;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Экстремальный серф-сафари на волнах",
+    "description": "Экстремальный серф-сафари на волнахЭкстремальный серф-сафари на волнах",
+    "img":"/Rests/serf.png",
+    "where": "Бали, Индонезия",
+    "long": 9,
+    "cost": 3320
+  },
+  {
+    "name": "HollySurf",
+    "description": "HollySurf",
+    "img":"/Rests/hollysurf.png",
+    "where": "Шри-Ланка",
+    "long": 10,
+    "cost": 1200
+  },
+  {
+    "name": "Экстремальный серф-сафари на волнах",
+    "description": "Экстремальный серф-сафари на волнахЭкстремальный серф-сафари на волнах",
+    "img":"/Rests/serf.png",
+    "where": "Бали, Индонезия",
+    "long": 9,
+    "cost": 3320
+  },
+  {
+    "name": "HollySurf",
+    "description": "HollySurf",
+    "img":"/Rests/hollysurf.png",
+    "where": "Шри-Ланка",
+    "long": 10,
+    "cost": 1200
+  },
+  {
+    "name": "Экстремальный серф-сафари на волнах",
+    "description": "Экстремальный серф-сафари на волнахЭкстремальный серф-сафари на волнах",
+    "img":"/Rests/serf.png",
+    "where": "Бали, Индонезия",
+    "long": 9,
+    "cost": 3320
+  },
+  {
+    "name": "HollySurf",
+    "description": "HollySurf",
+    "img":"/Rests/hollysurf.png",
+    "where": "Шри-Ланка",
+    "long": 10,
+    "cost": 1200
+  }
+]

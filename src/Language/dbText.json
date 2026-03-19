@@ -26,7 +26,8 @@
     "Surname":"Surname",
     "City":"City",
     "Country":"Country",
-    "Number":"Number"
+    "Number":"Number",
+    "Change account":"Change account"
   },
   "ru": {
     "Oops...": "Упс...",
@@ -55,6 +56,7 @@
     "Surname":"Фамилия",
     "City":"Город",
     "Country":"Страна",
-    "Number":"Номер"
+    "Number":"Номер",
+    "Change account":"Сменить аккаунт"
   }
 }

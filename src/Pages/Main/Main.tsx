@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-import Profile from "../Profile/Profile";
+import Profile from "./Profile/Profile";
+import BlockRest from "./BlockRest/BlockRest";
+
 import T from "../../Language/Text";
 import getCookie from "../../Utils/getCookie";
+import dbRests from "../../Components/rests.json";
 
 import "./Main.scss";
 
@@ -15,7 +19,7 @@ export default function Main() {
   }
 
   return (
-    <div className="Main" onClick={() => closeProfile()}>
+    <div className="main" onClick={() => closeProfile()}>
       {profileShow && <Profile />}
       <p
         onClick={() => (
@@ -47,13 +51,20 @@ export default function Main() {
       >
         {T("Black theme")}
       </p>
-      {getCookie("isLogin") && (
+
+      {(getCookie("isLogin") && (
         <img
           onClick={() => setProfileShow(!profileShow)}
           src="/profile.svg"
           alt=""
         />
-      )}
+      )) || <NavLink to="/login">{T("Login")}</NavLink>}
+
+      <div className="all_rests gray">
+        {dbRests.map((item) => (
+          <BlockRest {...item}/>
+        ))}
+      </div>
     </div>
   );
 }
