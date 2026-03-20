@@ -30,7 +30,8 @@
     "Country":"Country",
     "Number":"Number",
     "Change account":"Change account",
-    "Are you want to change account?": "Are you want to change account?"
+    "Are you want to change account?": "Are you want to change account?",
+    "Go to main page": "Go to main page"
   },
   "ru": {
     "Yes":"Да, я уверен",
@@ -63,6 +64,7 @@
     "Country":"Страна",
     "Number":"Номер",
     "Change account":"Сменить аккаунт",
-    "Are you want to change account?": "Вы хотите сменить аккаунт?"
+    "Are you want to change account?": "Вы хотите сменить аккаунт?",
+    "Go to main page": "Перейти на главную страницу"
   }
 }

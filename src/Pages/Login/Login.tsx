@@ -119,6 +119,7 @@ export default function Login() {
         )}
       </form>
       <NavLink to="/register">{T("Register")}</NavLink>
+      <NavLink to="/">{T("Go to main page")}</NavLink>
     </div>
   );
 }

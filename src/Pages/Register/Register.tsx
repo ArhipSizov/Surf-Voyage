@@ -211,6 +211,7 @@ export default function Register() {
         )}
       </form>
       <NavLink to="/login">{T("Login")}</NavLink>
+      <NavLink to="/">{T("Go to main page")}</NavLink>
       <p className="gray_p">
         {T(
           "By registering in the application you agree to the user agreement and privacy policy"
