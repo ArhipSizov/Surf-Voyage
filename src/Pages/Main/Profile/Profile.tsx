@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 import type data from "../../../Services/fbData";
@@ -11,6 +10,7 @@ interface state {
 }
 
 import ChangeProfile from "./ChangeProfile/ChangeProfile";
+import ConfirmSignOut from "./ConfirmSignOut/ConfirmSignOut";
 import T from "../../../Language/Text";
 
 import "./Profile.scss";
@@ -19,6 +19,9 @@ export default function Profile() {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [showChangeProfile, setShowChangeProfile] = useState<boolean>(false);
+  const [confirmSignOutUser, setConfirmSignOutUser] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   const userArr = useSelector((state: state) => state.user.user);
   if (email == "") {
@@ -28,18 +31,11 @@ export default function Profile() {
     });
   }
 
-  const auth = getAuth();
-  const navigate = useNavigate();
-
-  function signOutUser() {
-    signOut(auth).then(() => {
-      document.cookie = `isLogin=; max-age=604800`;
-      navigate("/login");
-    });
-  }
-
   return (
     <div className="profile gray" onClick={(event) => event.stopPropagation()}>
+      {confirmSignOutUser && (
+        <ConfirmSignOut setConfirmSignOutUser={setConfirmSignOutUser} />
+      )}
       <div>
         <div className="top_profile">
           <p className="name">
@@ -68,11 +64,11 @@ export default function Profile() {
             <img src="/Profile/help.svg" alt="" />
             <p>{T("Help center")}</p>
           </div>
-          <div onClick={() => signOutUser()} className="profile_block">
+          <div onClick={() => navigate("/login")} className="profile_block">
             <img src="/profile.svg" alt="" />
             <p>{T("Change account")}</p>
           </div>
-          <div onClick={() => signOutUser()} className="profile_block">
+          <div onClick={() => setConfirmSignOutUser(true)} className="profile_block">
             <img src="/Profile/exit.svg" alt="" />
             <p>{T("Log out")}</p>
           </div>

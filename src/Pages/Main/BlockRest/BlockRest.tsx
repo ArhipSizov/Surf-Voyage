@@ -17,8 +17,6 @@ export default function BlockRest({
   cost,
   img,
 }: type) {
-  console.log(name, description, where, long, cost);
-
   return (
     <div className="block_rest main_color">
       <img className="main_img" src={img} alt="" />
@@ -28,6 +26,9 @@ export default function BlockRest({
         <p>{where}</p>
         <p>{long} ночей</p>
         <p>{cost}$</p>
+
+        {/* no need */}
+        <p className="none">{description}$</p>
       </div>
     </div>
   );

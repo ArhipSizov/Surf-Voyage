@@ -1,5 +1,7 @@
 {
   "en": {
+    "Yes":"Yes I'm sure",
+    "No":"No, I don`t",
     "Oops...": "Oops...",
     "This page doesn't seem to exist, you can go back to": "This page doesn't seem to exist, you can go back to",
     "home": "home",
@@ -27,9 +29,12 @@
     "City":"City",
     "Country":"Country",
     "Number":"Number",
-    "Change account":"Change account"
+    "Change account":"Change account",
+    "Are you want to change account?": "Are you want to change account?"
   },
   "ru": {
+    "Yes":"Да, я уверен",
+    "No":"Нет, я передумал/а",
     "Oops...": "Упс...",
     "This page doesn't seem to exist, you can go back to": "Похоже, этой страницы не существует, вы можете вернутся на",
     "home": "главную",
@@ -57,6 +62,7 @@
     "City":"Город",
     "Country":"Страна",
     "Number":"Номер",
-    "Change account":"Сменить аккаунт"
+    "Change account":"Сменить аккаунт",
+    "Are you want to change account?": "Вы хотите сменить аккаунт?"
   }
 }

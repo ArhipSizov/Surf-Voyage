@@ -23,14 +23,16 @@ export default function Main() {
       {profileShow && <Profile />}
       <p
         onClick={() => (
-          (document.cookie = "language=ru; max-age=604800"), location.reload()
+          (document.cookie = "language=ru; max-age=604800"),
+          location.reload()
         )}
       >
         Русский
       </p>
       <p
         onClick={() => (
-          (document.cookie = "language=en; max-age=604800"), location.reload()
+          (document.cookie = "language=en; max-age=604800"),
+          location.reload()
         )}
       >
         English
@@ -62,7 +64,7 @@ export default function Main() {
 
       <div className="all_rests gray">
         {dbRests.map((item) => (
-          <BlockRest {...item}/>
+          <BlockRest {...item} key={item.id} />
         ))}
       </div>
     </div>
