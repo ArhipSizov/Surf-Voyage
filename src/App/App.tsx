@@ -9,7 +9,7 @@ import getCookie from "../Utils/getCookie";
 
 import "./App.scss";
 
-import { Loading, Error, Main, Login, Register } from "./links";
+import { Loading, Error, Main, Login, Register, Support } from "./links";
 
 import type data from "../Services/fbData";
 
@@ -85,6 +85,7 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/support" element={<Support />} />
         <Route path="/" element={<Main />} />
       </Routes>
     </div>

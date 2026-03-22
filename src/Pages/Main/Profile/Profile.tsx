@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import type data from "../../../Services/fbData";
 import type allData from "../../../Services/fbAllData";
@@ -60,10 +61,10 @@ export default function Profile() {
             <img src="/Profile/trips.svg" alt="" />
             <p>{T("My trips")}</p>
           </div>
-          <div className="profile_block">
+          <NavLink to="/support" className="profile_block">
             <img src="/Profile/help.svg" alt="" />
             <p>{T("Help center")}</p>
-          </div>
+          </NavLink>
           <div onClick={() => navigate("/login")} className="profile_block">
             <img src="/profile.svg" alt="" />
             <p>{T("Change account")}</p>

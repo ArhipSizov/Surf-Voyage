@@ -19,6 +19,8 @@
   }
   .profile_all_block {
     .profile_block {
+      display: block;
+      text-decoration: none;
       cursor: pointer;
       transition: 0.15s;
       margin-top: 12px;
