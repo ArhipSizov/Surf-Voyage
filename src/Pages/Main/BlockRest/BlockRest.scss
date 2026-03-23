@@ -1,10 +1,16 @@
 .block_rest{
+    display: block;
     width: 400px;
     margin: 12px auto;
+    padding-bottom: 12px;
     border-radius: 12px;
     cursor: pointer;
+    text-decoration: none;
     .main_img{
         width: 100%;
+    }
+    h2{
+        padding: 0 6px;
     }
     div{
         display: flex;

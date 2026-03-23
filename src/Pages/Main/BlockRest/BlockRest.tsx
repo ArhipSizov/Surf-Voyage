@@ -1,24 +1,19 @@
+import { NavLink } from "react-router-dom";
 import "./BlockRest.scss";
 
-interface type {
-  name: string;
-  description: string;
-  img: string;
-  where: string;
-  long: number;
-  cost: number;
-}
+
+import type { restsType } from "../../../Components/RestsType";
 
 export default function BlockRest({
+  id,
   name,
-  description,
   where,
   long,
   cost,
   img,
-}: type) {
+}: restsType) {
   return (
-    <div className="block_rest main_color">
+    <NavLink className="block_rest main_color" to={`/order/${id}`}>
       <img className="main_img" src={img} alt="" />
       <h2>{name}</h2>
       <div>
@@ -26,10 +21,7 @@ export default function BlockRest({
         <p>{where}</p>
         <p>{long} ночей</p>
         <p>{cost}$</p>
-
-        {/* no need */}
-        <p className="none">{description}$</p>
       </div>
-    </div>
+    </NavLink>
   );
 }
