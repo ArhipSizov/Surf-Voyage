@@ -1,0 +1,14 @@
+.back_button {
+  display: block;
+  position: absolute;
+  margin-top: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  p {
+    display: inline;
+    margin-left: 6px;
+  }
+  img {
+    height: 12px;
+  }
+}

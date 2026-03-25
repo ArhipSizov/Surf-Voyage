@@ -1,13 +1,15 @@
 import "./Support.scss";
 
 import Question from "./Question/Question";
+import BackButton from "../../Components/BackButton/BackButton";
 
 import T from "../../Language/Text";
-import dbQuestion from "../../Components/questions.json"
+import dbQuestion from "../../Components/questions.json";
 
 export default function Support() {
   return (
-    <div className="support">
+    <div className="support max_width">
+      <BackButton/>
       <h1>{T("Support center")}</h1>
       <div>
         <h2>{T("Frequently asked questions:")}</h2>

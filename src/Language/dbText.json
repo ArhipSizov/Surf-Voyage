@@ -36,7 +36,8 @@
     "Don't help? You can write your problem here: @arhipsizov47@gmail.com": "Don't help? You can write your problem here: @arhipsizov47@gmail.com",
     "Frequently asked questions:":"Frequently asked questions:",
     "You may be entering incorrect login information or you have not registered yet.": "You may be entering incorrect login information or you have not registered yet",
-    "Why can't I log in?": "Why can't I log in?"
+    "Why can't I log in?": "Why can't I log in?",
+    "Home":"Home"
   },
   "ru": {
     "Yes": "Да, я уверен",
@@ -75,6 +76,7 @@
     "Don't help? You can write your problem here: @arhipsizov47@gmail.com": "Не помогаете? Вы можете написать свою проблему здесь: @arhipsizov47@gmail.com",
     "Frequently asked questions:":"Часто задаваемые вопросы:",
     "You may be entering incorrect login information or you have not registered yet.": "Возможно, вы вводите неверные данные для входа или вы ещё не зарегистрировались",
-    "Why can't I log in?": "Почему я не могу войти в систему?"
+    "Why can't I log in?": "Почему я не могу войти в систему?",
+    "Home":"На главную"
   }
 }

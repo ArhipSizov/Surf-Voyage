@@ -62,10 +62,12 @@ export default function Main() {
         />
       )) || <NavLink to="/login">{T("Login")}</NavLink>}
 
-      <div className="all_rests gray">
-        {dbRests.map((item) => (
-          <BlockRest {...item} key={item.id} />
-        ))}
+      <div className="gray">
+        <div className="all_rests max_width">
+          {dbRests.map((item) => (
+            <BlockRest {...item} key={item.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
