@@ -1,6 +1,12 @@
-.support{
-    padding: 12px;
-    h1{
-        text-align: center;
+.support {
+  padding: 12px;
+  h1 {
+    text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    h1 {
+      padding-top: 24px;
     }
+  }
 }

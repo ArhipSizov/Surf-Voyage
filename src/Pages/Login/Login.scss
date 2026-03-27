@@ -64,9 +64,10 @@
     font-size: 24px;
     display: block;
     width: 300px;
-    margin: 0 auto 36px auto;
+    margin: 0 auto 0 auto;
     text-align: center;
     transition: 0.15s;
+    padding-bottom: 36px;
   }
   a:hover {
     transform: scale(1.05);

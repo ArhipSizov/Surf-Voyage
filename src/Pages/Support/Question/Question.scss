@@ -1,11 +1,28 @@
 .question {
-    cursor: pointer;
-    margin: 12px;
-    .name{
-        font-size: 20px;
-    }
-    .description{
-        margin-top: 2px;
-        font-size: 18px;
-    }
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: 6px;
+  border-bottom: #898a8d 1px solid;
+  .img_1 {
+    margin-left: 100px;
+    transform: rotate(90deg);
+  }
+  .img_2 {
+    margin-left: 100px;
+    transform: rotate(-90deg);
+  }
+  .name {
+    display: inline;
+    font-size: 20px;
+  }
+  .description {
+    margin-top: 2px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .question {
+    padding: 18px 0;
+  }
 }
