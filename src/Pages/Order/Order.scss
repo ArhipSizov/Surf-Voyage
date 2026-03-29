@@ -1,0 +1,117 @@
+.order {
+  padding: 12px;
+  .top_block {
+    display: flex;
+    justify-content: space-between;
+    .actions {
+      margin: 10px 0 0 560px;
+      display: flex;
+      justify-content: space-between;
+      width: 130px;
+      position: absolute;
+      img {
+        cursor: pointer;
+        width: 40px;
+        padding: 8px;
+        border-radius: 16px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.24);
+      }
+    }
+    .main_img {
+      width: 700px;
+    }
+    .right_block {
+      width: 700px;
+      h2{
+        margin: 8px 0;
+      }
+      .grade {
+        p {
+          display: inline;
+        }
+      }
+      .order_button {
+        margin-top: 12px;
+        background-color: green;
+        width: 300px;
+        text-align: center;
+        font-size: 32px;
+        padding: 6px;
+        border-radius: 8px;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .order_button:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+  .description {
+    width: 700px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .order {
+    width: 1000px;
+    .top_block {
+      .actions {
+        margin-left: 360px;
+      }
+      .main_img {
+        width: 500px;
+      }
+      .right_block {
+        width: 450px;
+        .order_button {
+          width: 450px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .order {
+    width: 700px;
+    .top_block {
+      flex-direction: column;
+      .actions {
+        margin-left: 560px;
+      }
+      .main_img {
+        width: 700px;
+      }
+      .right_block {
+        width: 700px;
+        .order_button {
+          width: 700px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .order {
+    width: 100%;
+    .top_block {
+      .actions {
+        margin-left: 10px;
+      }
+      .main_img {
+        width: 100%;
+      }
+      .right_block {
+        width: 100%;
+        .order_button {
+          width: 100%;
+        }
+      }
+    }
+    .description {
+      width: 100%;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "Экстремальный серф-сафари на волнах",
     "description": "Экстремальный серф-сафари на волнахЭкстремальный серф-сафари на волнах",
     "img": "/Rests/serf.png",
@@ -9,7 +9,7 @@
     "cost": 3321
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "HollySurf",
     "description": "HollySurf is greatest",
     "img": "/Rests/hollysurf.png",
@@ -18,7 +18,7 @@
     "cost": 1202
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Экстремальный серф-сафари на волнах",
     "description": "Экстремальный серф-сафари на волнахЭкстремальный серф-сафари на волнах",
     "img": "/Rests/serf.png",
@@ -27,7 +27,7 @@
     "cost": 3323
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "HollySurf",
     "description": "HollySurf is greatest",
     "img": "/Rests/hollysurf.png",
@@ -36,7 +36,7 @@
     "cost": 1204
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Экстремальный серф-сафари на волнах",
     "description": "Экстремальный серф-сафари на волнахЭкстремальный серф-сафари на волнах",
     "img": "/Rests/serf.png",
@@ -45,7 +45,7 @@
     "cost": 3325
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "HollySurf",
     "description": "HollySurf is greatest",
     "img": "/Rests/hollysurf.png",

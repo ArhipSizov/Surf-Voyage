@@ -37,7 +37,9 @@
     "Frequently asked questions:":"Frequently asked questions:",
     "You may be entering incorrect login information or you have not registered yet.": "You may be entering incorrect login information or you have not registered yet",
     "Why can't I log in?": "Why can't I log in?",
-    "Home":"Home"
+    "Home":"Home",
+    "days": "days",
+    "Order": "Order"
   },
   "ru": {
     "Yes": "Да, я уверен",
@@ -77,6 +79,8 @@
     "Frequently asked questions:":"Часто задаваемые вопросы:",
     "You may be entering incorrect login information or you have not registered yet.": "Возможно, вы вводите неверные данные для входа или вы ещё не зарегистрировались",
     "Why can't I log in?": "Почему я не могу войти в систему?",
-    "Home":"На главную"
+    "Home":"На главную",
+    "days": "дн.",
+    "Order": "Заказать"
   }
 }
