@@ -10,7 +10,6 @@ interface state {
   user: allData;
 }
 
-import ChangeProfile from "./ChangeProfile/ChangeProfile";
 import ConfirmSignOut from "./ConfirmSignOut/ConfirmSignOut";
 import T from "../../../Language/Text";
 
@@ -19,7 +18,6 @@ import "./Profile.scss";
 export default function Profile() {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
-  const [showChangeProfile, setShowChangeProfile] = useState<boolean>(false);
   const [confirmSignOutUser, setConfirmSignOutUser] = useState<boolean>(false);
 
   const navigate = useNavigate();
@@ -47,7 +45,6 @@ export default function Profile() {
         </div>
         <div className="profile_all_block">
           <div
-            onClick={() => setShowChangeProfile(true)}
             className="profile_block"
           >
             <img src="/Profile/change.svg" alt="" />
@@ -75,9 +72,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      {showChangeProfile && (
-        <ChangeProfile setShowChangeProfile={setShowChangeProfile} />
-      )}
     </div>
   );
 }

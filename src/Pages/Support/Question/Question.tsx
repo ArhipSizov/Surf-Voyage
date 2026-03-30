@@ -10,7 +10,6 @@ interface type {
 }
 export default function Question({ name, description }: type) {
   const [descriptionShow, setDescriptionShow] = useState<boolean>(false);
-  console.log(name, description);
 
   return (
     <div

@@ -38,7 +38,7 @@
     .login_button:hover {
       transform: scale(1.05);
     }
-    .login_button_no_click{
+    .login_button_no_click {
       background-color: #1995f570;
       color: #ffffff;
       cursor: no-drop;
@@ -46,7 +46,7 @@
     .login_button_no_click:hover {
       transform: scale(1);
     }
-    .eye{
+    .eye {
       display: block;
       height: 286px;
       margin: auto 0;
@@ -54,7 +54,7 @@
       margin-left: 260px;
       width: 22px;
     }
-    .error_text{
+    .error_text {
       margin-top: 12px;
       color: #df2f2f;
       font-size: 24px;
@@ -71,5 +71,8 @@
   }
   a:hover {
     transform: scale(1.05);
+  }
+  .main_link {
+    text-decoration: none;
   }
 }

@@ -26,6 +26,14 @@
     grid-template-columns: 1fr 1fr;
     width: 600px;
     margin: 0 auto;
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"]::-ms-clear {
+      display: none;
+    }
     input {
       margin: 2%;
       width: 96%;
@@ -76,6 +84,9 @@
   }
   a:hover {
     transform: scale(1.05);
+  }
+  .main_link {
+    text-decoration: none;
   }
   @media (max-width: 650px) {
     .register_form {
