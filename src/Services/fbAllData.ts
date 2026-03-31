@@ -1,5 +1,9 @@
-import type data from "./fbData";
+import type { dataUser, dataRests } from "./fbData";
 
-export default interface allData {
-  user: data[];
+export interface allDataUser {
+  user: dataUser[];
+}
+
+export interface allDataRests {
+  rests: dataRests[];
 }

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./BlockRest.scss";
 
-import type { restsType } from "../../../Components/RestsType";
+import type { dataRests } from "../../../Services/fbData";
 
 export default function BlockRest({
   id,
@@ -10,7 +10,7 @@ export default function BlockRest({
   long,
   cost,
   img,
-}: restsType) {
+}: dataRests) {
   return (
     <NavLink className="block_rest main_color" to={`/order/${id}`}>
       <img className="main_img" src={img} alt="" />

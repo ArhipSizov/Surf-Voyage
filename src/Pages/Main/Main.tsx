@@ -1,17 +1,26 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import type { dataRests } from "../../Services/fbData";
+import type { allDataRests } from "../../Services/fbAllData";
+import { useSelector } from "react-redux";
 
 import Profile from "./Profile/Profile";
 import BlockRest from "./BlockRest/BlockRest";
 
 import T from "../../Language/Text";
 import getCookie from "../../Utils/getCookie";
-import dbRests from "../../Components/rests.json";
+
+interface state {
+  rests: allDataRests;
+}
 
 import "./Main.scss";
 
 export default function Main() {
+  const restsArr = useSelector((state: state) => state.rests.rests);
+
   const [profileShow, setProfileShow] = useState<boolean>(false);
+  const [dbRests] = useState<dataRests[]>(restsArr);
   function closeProfile() {
     if (profileShow) {
       setProfileShow(false);

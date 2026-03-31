@@ -1,27 +1,33 @@
 import { database } from "./store/index";
 
-interface userData {
-  email: string;
-  pasword: string;
-  name: string;
-  surname: string;
-  city: string;
-  country: string;
-  number: string;
-}
+import type { dataUser, dataRests } from "./fbData";
 
-export const addUserDB = (userData: userData) => {
-  const ref = database.ref("users").push();
-  const newKey = ref.key;
-  const dataWithKey = {
-    key: newKey,
-    email: userData.email,
-    password: userData.pasword,
-    name: userData.name,
-    surname: userData.surname,
-    city: userData.city,
-    country: userData.country,
-    number: userData.number,
+export const addUserDB = (dataUser: dataUser) => {
+  const refUser = database.ref("users").push();
+  const dataWithKeyUser = {
+    key: refUser.key,
+    email: dataUser.email,
+    password: dataUser.password,
+    name: dataUser.name,
+    surname: dataUser.surname,
+    city: dataUser.city,
+    country: dataUser.country,
+    number: dataUser.number,
   };
-  ref.set(dataWithKey);
+  refUser.set(dataWithKeyUser);
+};
+
+export const addRestsDB = (dataRests: dataRests) => {
+  const refRests = database.ref("rests").push();
+  const dataWithKeyRests = {
+    key: refRests.key,
+    id: dataRests.id,
+    name: dataRests.name,
+    description: dataRests.description,
+    img: dataRests.img,
+    where: dataRests.where,
+    long: dataRests.long,
+    cost: dataRests.cost,
+  };
+  refRests.set(dataWithKeyRests);
 };

@@ -12,14 +12,14 @@ import T from "../../Language/Text";
 
 import "./Login.scss";
 
-import type data from "../../Services/fbData";
+import type { dataUser } from "../../Services/fbData";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("none");
   const [errorEmail, setErrorEmail] = useState<string>("none");
   const [canClick, setCanClick] = useState<boolean>(false);
-  const [pasword, setPasword] = useState<string>("");
+  const [password, setpassword] = useState<string>("");
   const [type, setType] = useState<boolean>(true);
 
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export default function Login() {
   function getLoginData(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, pasword)
+    signInWithEmailAndPassword(auth, email, password)
       .then(() => {
         navigate("/");
         document.cookie = `isLogin=true; max-age=604800`;
@@ -53,9 +53,9 @@ export default function Login() {
     onAuthStateChanged(auth, () => {
       onValue(starCountRef, (snapshot) => {
         data = snapshot.val();
-        const dataArr: data[] = Object.values(data.users);
+        const dataArr: dataUser[] = Object.values(data.users);
         let find: boolean = false;
-        dataArr.forEach(function (item: data) {
+        dataArr.forEach(function (item: dataUser) {
           if (item.email == email) {
             setErrorEmail("none");
             setCanClick(true);
@@ -93,8 +93,8 @@ export default function Login() {
         />
         <h3>{T("Password")}</h3>
         <input
-          value={pasword}
-          onChange={(e) => setPasword(e.target.value)}
+          value={password}
+          onChange={(e) => setpassword(e.target.value)}
           className="input"
           placeholder={T("Password")}
           type={type ? "password" : "text"}

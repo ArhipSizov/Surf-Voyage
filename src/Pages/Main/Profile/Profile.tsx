@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-import type data from "../../../Services/fbData";
-import type allData from "../../../Services/fbAllData";
+import type { dataUser,  } from "../../../Services/fbData";
+import type { allDataUser } from "../../../Services/fbAllData";
 
 interface state {
-  user: allData;
+  user: allDataUser;
 }
 
 import ConfirmSignOut from "./ConfirmSignOut/ConfirmSignOut";
@@ -24,7 +24,7 @@ export default function Profile() {
 
   const userArr = useSelector((state: state) => state.user.user);
   if (email == "") {
-    userArr.forEach((element: data) => {
+    userArr.forEach((element: dataUser) => {
       setEmail(element.email);
       setName(element.name);
     });
@@ -44,9 +44,7 @@ export default function Profile() {
           <p className="email gray_p">{email}</p>
         </div>
         <div className="profile_all_block">
-          <div
-            className="profile_block"
-          >
+          <div className="profile_block">
             <img src="/Profile/change.svg" alt="" />
             <p>{T("Change profile")}</p>
           </div>
@@ -66,7 +64,10 @@ export default function Profile() {
             <img src="/profile.svg" alt="" />
             <p>{T("Change account")}</p>
           </div>
-          <div onClick={() => setConfirmSignOutUser(true)} className="profile_block">
+          <div
+            onClick={() => setConfirmSignOutUser(true)}
+            className="profile_block"
+          >
             <img src="/Profile/exit.svg" alt="" />
             <p>{T("Log out")}</p>
           </div>

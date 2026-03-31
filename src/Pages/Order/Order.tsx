@@ -1,21 +1,27 @@
 import "./Order.scss";
 import { useParams } from "react-router-dom";
-
-import type { restsType } from "../../Components/RestsType";
+import type { dataRests } from "../../Services/fbData";
+import type { allDataRests } from "../../Services/fbAllData";
+import { useSelector } from "react-redux";
 
 import T from "../../Language/Text";
 import Error from "../Error/Error";
-import dbOrders from "../../Components/rests.json";
 import { useState } from "react";
 
-export default function Order() {
-  const [db, setDb] = useState<restsType>();
+interface state {
+  rests: allDataRests;
+}
+
+export default function Order() {  
+  const restsArr = useSelector((state: state) => state.rests.rests);
+
+  const [dbRests] = useState<dataRests[]>(restsArr);
+  const [db, setDb] = useState<dataRests>();
 
   const { id } = useParams();
-  console.log(id, dbOrders);
 
   if (db == undefined) {
-    dbOrders.forEach((elem) => {
+    dbRests.forEach((elem) => {
       if (elem.id == Number(id)) {
         setDb(elem);
       }

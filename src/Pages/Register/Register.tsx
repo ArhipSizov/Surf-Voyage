@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addUser } from "../../Services/store/Slice";
+import { addUser } from "../../Services/store/SliceUser";
 import { addUserDB } from "../../Services/fbUsers";
 import { useState, useEffect } from "react";
 import {
@@ -15,11 +15,11 @@ import T from "../../Language/Text";
 
 import "./Register.scss";
 
-import type data from "../../Services/fbData";
+import type { dataUser } from "../../Services/fbData";
 
 export default function Register() {
   const [email, setEmail] = useState<string>("");
-  const [pasword, setPasword] = useState<string>("");
+  const [password, setpassword] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [surname, setSurname] = useState<string>("");
   const [city, setCity] = useState<string>("");
@@ -34,17 +34,19 @@ export default function Register() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const addTask = () => dispatch(addUser({ email, pasword }));
+  const addTask = () => dispatch(addUser({ email, password }));
 
   function getRegisterData(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, pasword)
+    createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
         if (auth.currentUser) {
           navigate("/");
           document.cookie = `isLogin=true; max-age=604800`;
-          addUserDB({ email, pasword, name, surname, city, country, number });
+          const key = ""//Crutch
+          const id = ""//Crutch
+          addUserDB({ key, id, email, password, name, surname, city, country, number });
           addTask();
         }
       })
@@ -67,7 +69,7 @@ export default function Register() {
   });
 
   useEffect(() => {
-    if (pasword.length >= 6) {
+    if (password.length >= 6) {
       setErrorPassword("none");
       if (errorEmail == "none") {
         setCanClick(true);
@@ -76,15 +78,15 @@ export default function Register() {
       setErrorPassword("error_text");
       setCanClick(false);
     }
-  }, [pasword]);
+  }, [password]);
 
   useEffect(() => {
     onAuthStateChanged(auth, () => {
       onValue(starCountRef, (snapshot) => {
         data = snapshot.val();
-        const dataArr: data[] = Object.values(data.users);
+        const dataArr: dataUser[] = Object.values(data.users);
         let find: boolean = false;
-        dataArr.forEach(function (item: data) {
+        dataArr.forEach(function (item: dataUser) {
           if (item.email == email) {
             setErrorEmail("error_text");
             find = true;
@@ -128,8 +130,8 @@ export default function Register() {
         <div>
           <h3>{T("Password")} *</h3>
           <input
-            onChange={(e) => setPasword(e.target.value)}
-            value={pasword}
+            onChange={(e) => setpassword(e.target.value)}
+            value={password}
             className="input"
             placeholder={T("Password")}
             type={type ? "password" : "text"}

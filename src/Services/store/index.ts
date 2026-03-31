@@ -1,6 +1,7 @@
 import { configureStore} from '@reduxjs/toolkit'
 
-import reducer from './Slice'
+import reducerUser from './SliceUser'
+import reducerRests from './SliceRests';
 import firebaseConfig from "../../../firebaseConfig";
 import firebase from "firebase/compat/app";
 
@@ -10,6 +11,7 @@ export const database = firebase.initializeApp(firebaseConfig).database();
 
 export default configureStore({
     reducer: {
-        user: reducer,
+        user: reducerUser,
+        rests: reducerRests
     }
 })
