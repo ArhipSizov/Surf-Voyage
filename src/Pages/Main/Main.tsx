@@ -20,7 +20,11 @@ export default function Main() {
   const restsArr = useSelector((state: state) => state.rests.rests);
 
   const [profileShow, setProfileShow] = useState<boolean>(false);
-  const [dbRests] = useState<dataRests[]>(restsArr);
+  const [dbRests, setDbRests] = useState<dataRests[] | undefined>(undefined);
+  if (dbRests == undefined && restsArr.length >= 1) {
+    setDbRests(restsArr);
+  }
+
   function closeProfile() {
     if (profileShow) {
       setProfileShow(false);
@@ -73,9 +77,8 @@ export default function Main() {
 
       <div className="gray">
         <div className="all_rests max_width">
-          {dbRests.map((item) => (
-            <BlockRest {...item} key={item.id} />
-          ))}
+          {!dbRests ||
+            dbRests.map((item) => <BlockRest {...item} key={item.id} />)}
         </div>
       </div>
     </div>
